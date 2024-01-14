@@ -1,0 +1,55 @@
+/* Main Colors */
+$first-blue: #0b3c6f;
+$second-blue: #082340;
+$third-blue: #3d48e9;
+$fourth-blue: #b0d7ff;
+$first-yellow: #e9de3d;
+$second-yellow: #e9de6f;
+$first-black: #000000;
+$second-black: #202020;
+$third-black: #454545;
+$first-white: #fff;
+$second-white: #ddd;
+
+/* Secondary Colors */
+$primary-red: #f54040;
+$primary-green: #63f457;
+$primary-blue: #64a2ff;
+$primary-yellow: #fbff4e;
+$disabled: #757575;
+$webdevzone: #2338fc;
+$list-ranker: #41a54b;
+$protality: #ec3d3d;
+
+/* Font Sizes */
+$font-1: 1rem;
+$font-1-125: 1.125rem;
+$font-1-5: 1.5rem;
+$font-1-875: 1.875rem;
+$font-2-25: 2.25rem;
+$font-2-625: 2.625rem;
+$font-3-5: 3.5rem;
+$font-4: 4rem;
+
+:root {
+    font-family: Atkinson Hyperlegible, Inter, system-ui, Avenir, Helvetica,
+        Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: $first-white;
+}
+
+body {
+    margin: 0;
+    background-color: $second-blue;
+    color: $first-white;
+}
