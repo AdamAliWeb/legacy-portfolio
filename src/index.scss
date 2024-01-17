@@ -1,35 +1,4 @@
-/* Main Colors */
-$first-blue: #0b3c6f;
-$second-blue: #082340;
-$third-blue: #3d48e9;
-$fourth-blue: #b0d7ff;
-$first-yellow: #e9de3d;
-$second-yellow: #e9de6f;
-$first-black: #000000;
-$second-black: #202020;
-$third-black: #454545;
-$first-white: #fff;
-$second-white: #ddd;
-
-/* Secondary Colors */
-$primary-red: #f54040;
-$primary-green: #63f457;
-$primary-blue: #64a2ff;
-$primary-yellow: #fbff4e;
-$disabled: #757575;
-$webdevzone: #2338fc;
-$list-ranker: #41a54b;
-$protality: #ec3d3d;
-
-/* Font Sizes */
-$font-1: 1rem;
-$font-1-125: 1.125rem;
-$font-1-5: 1.5rem;
-$font-1-875: 1.875rem;
-$font-2-25: 2.25rem;
-$font-2-625: 2.625rem;
-$font-3-5: 3.5rem;
-$font-4: 4rem;
+@import "./variables";
 
 :root {
     font-family: Atkinson Hyperlegible, Inter, system-ui, Avenir, Helvetica,
@@ -43,6 +12,12 @@ $font-4: 4rem;
     -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: $first-white;
@@ -50,6 +25,27 @@ a {
 
 body {
     margin: 0;
-    background-color: $second-blue;
+    min-height: 100vh;
+    background-color: $first-blue;
     color: $first-white;
+}
+
+.main-content {
+    padding-block: 4rem;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+}
+
+.text-shadow {
+    text-shadow: 2px 0 0 #000, 0 2px 0 #000, -2px 0 0 #000, 0 -2px 0 #000,
+        2px 2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000;
+}
+
+.active-page {
+    color: $second-yellow;
 }

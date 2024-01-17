@@ -1,0 +1,67 @@
+@import "../src/variables";
+
+.desktop-header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: $second-blue;
+    // transform: translateY(-100%);
+    // animation: slideIn 1s ease-in-out 1s forwards;
+}
+
+.desktop-main-logo {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-star-logo {
+    width: 40%;
+    height: auto;
+}
+
+.desktop-title-logo {
+    color: #b0d7ff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.desktop-nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav-link {
+    margin-inline: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+
+.desktop-nav-link:hover {
+    color: #e9de6f;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .desktop-nav-link {
+        margin-inline: 1rem;
+    }
+
+    .desktop-star-logo {
+        width: 35%;
+    }
+
+    .desktop-header {
+        justify-content: space-between;
+    }
+}

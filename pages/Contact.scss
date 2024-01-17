@@ -1,0 +1,27 @@
+.contact-container {
+    display: flex;
+    place-content: center;
+}
+
+.social-nav {
+    display: grid;
+    align-items: center;
+    width: 90%;
+    min-height: 80vh;
+}
+
+.social-link {
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+    .social-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .social-nav {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
