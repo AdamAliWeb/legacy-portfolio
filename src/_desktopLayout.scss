@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+.desktop-layout {
+    @media screen and (min-width: 1000px) {
+        .main-content {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+        }
+
+        .welcome-container {
+            flex-direction: row;
+            align-items: flex-end;
+            padding-inline: 2rem;
+        }
+
+        .welcome-title {
+            max-width: 900px;
+            text-align: start;
+            font-size: 3rem;
+        }
+
+        .main-planet {
+            max-width: 500px;
+        }
+
+        .rocket {
+            width: calc(350px + 10vw);
+        }
+
+        .biography-text {
+            padding-top: 2rem;
+            padding-bottom: 8rem;
+            font-size: 1.25rem;
+        }
+
+        .experience {
+            align-items: flex-start;
+            width: 75%;
+            margin: auto;
+        }
+
+        .experience-screen:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .form-header {
+            padding-top: 2rem;
+        }
+
+        .form-title {
+            font-size: 4rem;
+        }
+    }
+}

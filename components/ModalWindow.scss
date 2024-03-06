@@ -1,0 +1,28 @@
+@use "../src/variables" as *;
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0005;
+    z-index: 20;
+    overflow-y: auto;
+    // transform: translateX(-100%);
+}
+
+.modal-window {
+    margin-top: 1rem;
+    width: 90%;
+    max-height: 80vh;
+    display: absolute;
+    max-width: 700px;
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+}

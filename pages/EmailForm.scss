@@ -1,0 +1,56 @@
+@use "../src/variables" as *;
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.form-title {
+    color: $fourth-blue;
+    font-size: 7vw;
+    margin: 0;
+}
+
+.form-container {
+    max-width: 1000px;
+    margin-top: 1rem;
+}
+
+.form-input {
+    font-family: $font-atkinson;
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-block: 0.5rem;
+    border: solid 2px $first-black;
+    border-radius: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    border: solid 2px $first-black;
+    border-radius: 1rem;
+    background-color: $third-blue;
+    color: $first-white;
+}
+
+.error-message {
+    width: 95%;
+    font-size: 1.25rem;
+    text-align: start;
+    margin: 0rem;
+    color: $primary-red;
+}

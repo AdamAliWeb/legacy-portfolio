@@ -1,0 +1,72 @@
+@use "../src/variables" as *;
+
+.experience-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 550px;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-block: 1rem;
+    background-color: $third-black;
+    border: solid medium $first-black;
+    border-radius: 1rem;
+}
+
+.screen-container {
+    background-color: $third-blue;
+
+    width: 95%;
+    padding: 0.5rem;
+
+    border: solid medium $first-black;
+    border-radius: 1rem;
+}
+
+.screen-toggler {
+    width: 95%;
+    margin-bottom: 0.5rem;
+}
+
+.toggler-btn {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.5rem;
+    margin-inline: 0.1rem;
+    border: solid 2px $first-black;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.off {
+    background-color: $primary-red;
+}
+
+.on {
+    background-color: $primary-green;
+}
+
+.screen-off {
+    background-color: $second-black;
+
+    div {
+        visibility: hidden;
+    }
+}
+
+.screen-title {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.screen-text {
+    white-space: pre-line;
+    word-break: break-all;
+}
+
+@media screen and (min-width: 500px) {
+    .screen-text {
+        word-break: initial;
+    }
+}

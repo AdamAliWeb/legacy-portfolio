@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-export default function LinkedinPlanetSVG() {
+export default function LinkedinPlanetSVG({
+    rotateDuration,
+    scaleDuration,
+    scaleDelay,
+}) {
     return (
         <svg
             width={242}
@@ -8,14 +12,25 @@ export default function LinkedinPlanetSVG() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <g id="Linkedin">
+            <motion.g
+                id="Linkedin"
+                animate={{
+                    scale: [0, 1],
+                }}
+                transition={{
+                    duration: scaleDuration,
+                    delay: scaleDelay,
+                    ease: "linear",
+                    times: [0, 1],
+                }}
+            >
                 <motion.g
                     id="social-planet-linkedin"
                     animate={{
                         rotate: [0, 360],
                     }}
                     transition={{
-                        duration: 50,
+                        duration: rotateDuration,
                         ease: "linear",
                         times: [0, 1],
                         repeat: Infinity,
@@ -124,7 +139,7 @@ export default function LinkedinPlanetSVG() {
                     d="M167.286 67H74.6902C70.4473 67 67 70.4955 67 74.7866V167.213C67 171.504 70.4473 175 74.6902 175H167.286C171.529 175 175 171.504 175 167.213V74.7866C175 70.4955 171.529 67 167.286 67ZM99.6411 159.571H83.6339V108.03H99.6652V159.571H99.6411ZM91.6375 100.991C86.5027 100.991 82.3563 96.8205 82.3563 91.7098C82.3563 86.5991 86.5027 82.4286 91.6375 82.4286C96.7482 82.4286 100.919 86.5991 100.919 91.7098C100.919 96.8446 96.7723 100.991 91.6375 100.991ZM159.644 159.571H143.637V134.5C143.637 128.521 143.516 120.831 135.32 120.831C126.979 120.831 125.701 127.34 125.701 134.066V159.571H109.694V108.03H125.05V115.07H125.267C127.412 111.02 132.644 106.753 140.43 106.753C156.63 106.753 159.644 117.432 159.644 131.318V159.571Z"
                     fill="black"
                 />
-            </g>
+            </motion.g>
             <defs>
                 <radialGradient
                     id="paint0_radial_531_426"

@@ -6,10 +6,11 @@
     width: 100%;
     text-align: center;
     background-color: $second-blue;
+    z-index: 10;
 }
 
 .mobile-header h2 {
-    font-size: $font-2-25;
+    font-size: $font-size-30;
     margin-block: 0.2rem;
 }
 
@@ -19,6 +20,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    z-index: 10;
     // transform: translateY(100%);
     // animation: slideIn 2s ease-in-out 1s forwards;
 }
@@ -30,11 +32,13 @@
     align-items: center;
     background-color: $second-blue;
     transform: translateY(100%);
-    transition: all 0.3s ease-in-out;
+    height: 0;
+    transition: all 0.3s allow-discrete ease-in-out;
 }
 
 .nav-menu-active {
     transform: translateY(0);
+    height: auto;
 }
 
 .mobile-navbar {
@@ -101,5 +105,6 @@
 @keyframes slideIn {
     to {
         transform: translateY(0%);
+        height: 0;
     }
 }

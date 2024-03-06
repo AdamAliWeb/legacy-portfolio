@@ -1,0 +1,45 @@
+@use "../src/variables" as *;
+
+.project-title {
+    width: 100%;
+    max-width: 350px;
+}
+
+.project-technologies {
+    width: 100%;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    margin: 0.5rem;
+    text-align: center;
+    font-family: $font-atkinson;
+    font-weight: bold;
+    font-size: 1rem;
+    word-break: keep-all;
+    background-color: $third-blue;
+    color: $first-white;
+    border: solid medium $first-black;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 4px #0003;
+    cursor: pointer;
+}
+
+.project-button-icon {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+.project-button-icon.large-icon {
+    width: 0.75rem;
+}

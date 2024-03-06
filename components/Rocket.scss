@@ -1,0 +1,21 @@
+.rocket {
+    width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+    .rocket {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .rocket {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .rocket {
+        width: 50%;
+    }
+}

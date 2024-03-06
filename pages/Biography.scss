@@ -1,0 +1,35 @@
+.biography-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.biography-text-center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 55vw;
+    height: 55vw;
+    min-width: 360px;
+    min-height: 360px;
+    max-width: 670px;
+    max-height: 670px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.biography-text {
+    width: 80%;
+    padding-top: 6vw;
+    padding-bottom: 10vw;
+    text-align: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+}

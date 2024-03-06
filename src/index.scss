@@ -1,8 +1,8 @@
-@import "./variables";
+@use "./variables" as *;
+@use "./desktopLayout" as *;
 
 :root {
-    font-family: Atkinson Hyperlegible, Inter, system-ui, Avenir, Helvetica,
-        Arial, sans-serif;
+    font-family: $font-atkinson;
     line-height: 1.5;
     font-weight: 400;
 
@@ -30,8 +30,13 @@ body {
     color: $first-white;
 }
 
+textarea {
+    resize: none;
+}
+
 .main-content {
-    padding-block: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
 }
 
 #particles-js {
@@ -48,4 +53,21 @@ body {
 
 .active-page {
     color: $second-yellow;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+    background-color: $fourth-blue;
+    color: $second-black;
+    border: solid medium $first-black;
+    border-radius: 1.5rem;
 }

@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-export default function TwitterPlanetSVG() {
+export default function TwitterPlanetSVG({
+    rotateDuration,
+    scaleDuration,
+    scaleDelay,
+}) {
     return (
         <svg
             width={242}
@@ -8,14 +12,25 @@ export default function TwitterPlanetSVG() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <g id="Twitter">
+            <motion.g
+                id="Twitter"
+                animate={{
+                    scale: [0, 1],
+                }}
+                transition={{
+                    duration: scaleDuration,
+                    delay: scaleDelay,
+                    ease: "linear",
+                    times: [0, 1],
+                }}
+            >
                 <motion.g
                     id="social-planet-twitter"
                     animate={{
                         rotate: [0, 360],
                     }}
                     transition={{
-                        duration: 50,
+                        duration: rotateDuration,
                         ease: "linear",
                         times: [0, 1],
                         repeat: Infinity,
@@ -112,7 +127,7 @@ export default function TwitterPlanetSVG() {
                     d="M164.59 98.4296C164.661 99.4139 164.661 100.398 164.661 101.383C164.661 131.406 141.771 166 99.9341 166C87.0451 166 75.0718 162.273 65 155.805C66.8313 156.016 68.5919 156.086 70.4937 156.086C81.1287 156.086 90.9188 152.5 98.7368 146.383C88.7354 146.172 80.354 139.633 77.4663 130.633C78.8751 130.844 80.2836 130.984 81.7628 130.984C83.8053 130.984 85.8479 130.703 87.7495 130.211C77.3256 128.101 69.5074 118.961 69.5074 107.922V107.641C72.5359 109.328 76.0578 110.383 79.7904 110.523C73.6628 106.445 69.6484 99.4843 69.6484 91.6092C69.6484 87.3905 70.7751 83.5234 72.7473 80.1483C83.946 93.9296 100.779 102.929 119.655 103.914C119.303 102.226 119.091 100.469 119.091 98.711C119.091 86.1952 129.233 76 141.841 76C148.391 76 154.307 78.7422 158.463 83.1719C163.604 82.1875 168.534 80.289 172.901 77.6875C171.211 82.9611 167.619 87.3908 162.9 90.2031C167.478 89.7111 171.915 88.4452 176 86.6876C172.902 91.1874 169.028 95.195 164.59 98.4296Z"
                     fill="black"
                 />
-            </g>
+            </motion.g>
             <defs>
                 <radialGradient
                     id="paint0_radial_531_425"

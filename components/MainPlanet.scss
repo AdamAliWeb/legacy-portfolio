@@ -1,0 +1,24 @@
+.main-planet {
+    width: 90%;
+
+    z-index: -99;
+}
+
+@media screen and (min-width: 500px) {
+    .main-planet {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .main-planet {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .main-planet {
+        bottom: 15%;
+        width: 50%;
+    }
+}

@@ -31,10 +31,10 @@ export default function MobileNavMenu() {
 
     return (
         <>
-            <section className="mobile-header text-shadow">
+            <header className="mobile-header text-shadow">
                 <h2>{sectionTitle}</h2>
                 <div id="spuper"></div>
-            </section>
+            </header>
             <section className="mobile-nav-container">
                 <nav
                     className={`mobile-nav-menu ${
