@@ -1,11 +1,24 @@
+import { useEffect } from "react";
 import BlackHole from "../components/BlackHole";
 import "./Biography.scss";
 
-export default function Biography() {
+import { motion } from "framer-motion";
+import { textFadeInBlackHoleAnimation } from "../helpers/onceAnimations";
+
+export default function Biography({ wasAnimated, activateProperty }) {
+    useEffect(() => {
+        activateProperty("blackHoleExpanding", "textFadeInBlackHole");
+    }, []);
+
     return (
         <article className="biography-container">
-            <BlackHole />
-            <section className="biography-text-center">
+            <BlackHole blackHoleExpanding={wasAnimated.blackHoleExpanding} />
+            <motion.section
+                className="biography-text-center"
+                {...(!wasAnimated.textFadeInBlackHole
+                    ? textFadeInBlackHoleAnimation
+                    : {})}
+            >
                 <div className="biography-text">
                     <h2>Introduction</h2>
                     <p>
@@ -76,7 +89,7 @@ export default function Biography() {
                         them.
                     </p>
                 </div>
-            </section>
+            </motion.section>
         </article>
     );
 }

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-export default function TwitterPlanetSVG({
-    rotateDuration,
-    scaleDuration,
-    scaleDelay,
-}) {
+import { socialPlanetScalingAnimation } from "../../helpers/onceAnimations";
+import { socialPlanetRotationAnimation } from "../../helpers/constantAnimations";
+
+export default function TwitterPlanetSVG({ socialPlanetsScaling, scaleDelay }) {
     return (
         <svg
             width={242}
@@ -14,27 +13,13 @@ export default function TwitterPlanetSVG({
         >
             <motion.g
                 id="Twitter"
-                animate={{
-                    scale: [0, 1],
-                }}
-                transition={{
-                    duration: scaleDuration,
-                    delay: scaleDelay,
-                    ease: "linear",
-                    times: [0, 1],
-                }}
+                {...(!socialPlanetsScaling
+                    ? socialPlanetScalingAnimation(scaleDelay)
+                    : {})}
             >
                 <motion.g
                     id="social-planet-twitter"
-                    animate={{
-                        rotate: [0, 360],
-                    }}
-                    transition={{
-                        duration: rotateDuration,
-                        ease: "linear",
-                        times: [0, 1],
-                        repeat: Infinity,
-                    }}
+                    {...socialPlanetRotationAnimation}
                 >
                     <path
                         id="Vector"

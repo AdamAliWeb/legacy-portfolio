@@ -2,13 +2,26 @@ import { Link, useLocation } from "react-router-dom";
 import "./MobileNavMenu.scss";
 import { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
+import {
+    footerSwingingAnimation,
+    headerSwingingAnimation,
+} from "../helpers/onceAnimations";
+import StarButton from "./StarButton";
+
 const transformTitle = (title) => {
     let newTitle = title.slice(1);
     newTitle = newTitle.charAt(0).toUpperCase() + newTitle.slice(1);
     return newTitle;
 };
 
-export default function MobileNavMenu() {
+export default function MobileNavMenu({
+    isDesktop,
+    wasAnimated,
+    activateProperty,
+    restartProperties,
+}) {
     let location = useLocation();
     const [navMenuActive, setNavMenuActive] = useState(false);
     const [sectionTitle, setSectionTitle] = useState("");
@@ -22,6 +35,10 @@ export default function MobileNavMenu() {
     };
 
     useEffect(() => {
+        activateProperty("headerSwinging");
+    }, []);
+
+    useEffect(() => {
         if (location.pathname === "/") {
             setSectionTitle("Welcome");
         } else {
@@ -31,11 +48,21 @@ export default function MobileNavMenu() {
 
     return (
         <>
-            <header className="mobile-header text-shadow">
+            <motion.header
+                className="mobile-header text-shadow"
+                {...(!wasAnimated.headerSwinging
+                    ? headerSwingingAnimation
+                    : {})}
+            >
                 <h2>{sectionTitle}</h2>
                 <div id="spuper"></div>
-            </header>
-            <section className="mobile-nav-container">
+            </motion.header>
+            <motion.section
+                className="mobile-nav-container"
+                {...(!wasAnimated.headerSwinging
+                    ? footerSwingingAnimation
+                    : {})}
+            >
                 <nav
                     className={`mobile-nav-menu ${
                         navMenuActive ? "nav-menu-active" : ""
@@ -84,10 +111,9 @@ export default function MobileNavMenu() {
                 </nav>
 
                 <div className="mobile-navbar">
-                    <img
-                        className="mobile-star-logo"
-                        src="../assets/star-logo.svg"
-                        alt="Star logo"
+                    <StarButton
+                        isDesktop={isDesktop}
+                        restartProperties={restartProperties}
                     />
                     <button
                         className={`mobile-nav-btn ${
@@ -100,7 +126,7 @@ export default function MobileNavMenu() {
                         <div className="mobile-nav-btn-bar-3"></div>
                     </button>
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 }

@@ -10,8 +10,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
-    min-height: 80vh;
+    overflow: visible;
+    min-height: 75vh;
 }
 
 .welcome-title {
@@ -19,9 +19,4 @@
     text-align: center;
     font-size: $font-size-36;
     color: $fourth-blue;
-}
-
-.comet {
-    position: fixed;
-    top: 0;
 }

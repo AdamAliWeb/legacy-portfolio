@@ -1,10 +1,22 @@
-# React + Vite
+# My personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal website...
 
-Currently, two official plugins are available:
+Things to do:
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Add states to the modal project buttons
+-   Check and improve every text in the page
+-   Fix the email submit and the messages
+-   Add an indicator for the black hole to scroll down
+-   Fix Black Hole lag
+-   Fix the mobile layout width bugs
+-   Optimize the code
+-   Comment the code
 
--   Fix the black hole from mobile to desktop size
+Things will do:
+
+-   Change particles for ts particles
+-   Add a moving background for the projects section
+-   Change the CV
+-   Update my social media
+-   Change the image of the projects to just the text

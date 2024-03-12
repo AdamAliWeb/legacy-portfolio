@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
+import { socialPlanetScalingAnimation } from "../../helpers/onceAnimations";
+import { socialPlanetRotationAnimation } from "../../helpers/constantAnimations";
 
-export default function CVPlanetSVG({
-    rotateDuration,
-    scaleDuration,
-    scaleDelay,
-}) {
+export default function CVPlanetSVG({ socialPlanetsScaling, scaleDelay }) {
     return (
         <svg
             width={242}
@@ -15,27 +13,13 @@ export default function CVPlanetSVG({
         >
             <motion.g
                 id="CV"
-                animate={{
-                    scale: [0, 1],
-                }}
-                transition={{
-                    duration: scaleDuration,
-                    delay: scaleDelay,
-                    ease: "linear",
-                    times: [0, 1],
-                }}
+                {...(!socialPlanetsScaling
+                    ? socialPlanetScalingAnimation(scaleDelay)
+                    : {})}
             >
                 <motion.g
                     id="social-planet-cv"
-                    animate={{
-                        rotate: [0, 360],
-                    }}
-                    transition={{
-                        duration: rotateDuration,
-                        ease: "linear",
-                        times: [0, 1],
-                        repeat: Infinity,
-                    }}
+                    {...socialPlanetRotationAnimation}
                 >
                     <path
                         id="Vector"

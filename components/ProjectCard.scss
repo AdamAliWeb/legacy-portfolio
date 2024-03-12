@@ -7,6 +7,7 @@
 
 .project-technologies {
     width: 100%;
+    padding-top: 1rem;
 }
 
 .project-links {
@@ -33,6 +34,10 @@
     border-radius: 1.25rem;
     box-shadow: 0 4px 4px #0003;
     cursor: pointer;
+}
+
+.project-button:hover {
+    transform: scale(1.05);
 }
 
 .project-button-icon {

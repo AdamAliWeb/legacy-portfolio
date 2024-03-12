@@ -33,14 +33,47 @@
             font-size: 1.25rem;
         }
 
-        .experience {
+        .experience-container {
             align-items: flex-start;
             width: 75%;
             margin: auto;
         }
 
+        .experience-screen {
+            max-width: 600px;
+        }
+
         .experience-screen:nth-child(even) {
             align-self: flex-end;
+        }
+
+        .screen-content {
+            padding: 1rem;
+        }
+
+        .screen-title {
+            font-size: 2rem;
+        }
+
+        .screen-text {
+            font-size: 1.15rem;
+        }
+
+        // .project-links {
+        //     display: flex;
+        // }
+
+        .project-technology {
+            width: 3rem;
+        }
+
+        .project-description {
+            font-size: 18px;
+            width: 90%;
+        }
+
+        .project-button {
+            width: auto;
         }
 
         .form-header {

@@ -1,17 +1,32 @@
 import { NavLink } from "react-router-dom";
 import "./DesktopNavMenu.scss";
+import StarButton from "./StarButton";
+import { motion } from "framer-motion";
+import { headerSwingingAnimation } from "../helpers/onceAnimations";
+import { useEffect } from "react";
 
-export default function DesktopNavMenu() {
+export default function DesktopNavMenu({
+    isDesktop,
+    wasAnimated,
+    activateProperty,
+    restartProperties,
+}) {
     let linkName = "desktop-nav-link text-shadow";
     let activeLinkName = "desktop-nav-link text-shadow active-page";
 
+    useEffect(() => {
+        activateProperty("headerSwinging");
+    }, []);
+
     return (
-        <header className="desktop-header">
+        <motion.header
+            className="desktop-header"
+            {...(!wasAnimated.headerSwinging ? headerSwingingAnimation : {})}
+        >
             <div className="desktop-main-logo">
-                <img
-                    className="desktop-star-logo"
-                    src="../assets/star-logo.svg"
-                    alt="Star logo"
+                <StarButton
+                    isDesktop={isDesktop}
+                    restartProperties={restartProperties}
                 />
                 <h1 className="desktop-title-logo text-shadow">Adam Ali</h1>
             </div>
@@ -62,6 +77,6 @@ export default function DesktopNavMenu() {
                     Contact
                 </NavLink>
             </nav>
-        </header>
+        </motion.header>
     );
 }

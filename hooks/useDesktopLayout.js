@@ -4,7 +4,7 @@ const MIN_WIDTH = 1000;
 
 export default function useDesktopLayout() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [desktopLayout, setDesktopLayout] = useState(false);
+    const [desktopLayout, setDesktopLayout] = useState();
 
     const changeWidth = () => setWindowWidth(window.innerWidth);
 

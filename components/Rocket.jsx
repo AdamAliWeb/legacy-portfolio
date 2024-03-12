@@ -1,18 +1,33 @@
 import { motion } from "framer-motion";
 
 import "./Rocket.scss";
+import { rocketGoingUpAnimation } from "../helpers/onceAnimations";
+import {
+    rocketBounceAnimation,
+    rocketFireAnimation,
+} from "../helpers/constantAnimations";
 
-export default function Rocket({ headColor, openModal }) {
+export default function Rocket({
+    rocketsFlying,
+    headColor,
+    openModal,
+    bounceDuration,
+}) {
     return (
-        <svg
+        <motion.svg
             className="rocket"
             viewBox="0 0 857 857"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            {...(!rocketsFlying ? rocketGoingUpAnimation : {})}
         >
-            <g id="rocket">
+            <motion.g id="rocket" {...rocketBounceAnimation(bounceDuration)}>
                 <g id="rocket-fire">
-                    <g id="big-fire">
+                    <motion.g
+                        id="big-fire"
+                        style={{ originX: 0, originY: 0 }}
+                        {...rocketFireAnimation(0.9, 0.8, 0.5)}
+                    >
                         <path
                             id="Vector"
                             d="M367.51 592.567C367.549 642.235 390.36 688.512 428.148 715.587C465.894 688.468 488.666 642.191 488.692 592.551C488.653 542.882 465.843 496.605 428.054 469.53C390.308 496.649 367.536 542.927 367.51 592.567Z"
@@ -32,8 +47,11 @@ export default function Rocket({ headColor, openModal }) {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                         />
-                    </g>
-                    <g id="medium-fire">
+                    </motion.g>
+                    <motion.g
+                        id="medium-fire"
+                        {...rocketFireAnimation(0.75, 1, 0.5)}
+                    >
                         <ellipse
                             id="Ellipse 9"
                             cx={429.041}
@@ -42,8 +60,11 @@ export default function Rocket({ headColor, openModal }) {
                             ry={65.5}
                             fill="#FF6B00"
                         />
-                    </g>
-                    <g id="small-fire">
+                    </motion.g>
+                    <motion.g
+                        id="small-fire"
+                        {...rocketFireAnimation(0.5, 1, 0.25)}
+                    >
                         <ellipse
                             id="Ellipse 10"
                             cx={429.041}
@@ -52,7 +73,7 @@ export default function Rocket({ headColor, openModal }) {
                             ry={39}
                             fill="#FF4307"
                         />
-                    </g>
+                    </motion.g>
                 </g>
                 <g id="rocket-body">
                     <g id="Group">
@@ -199,7 +220,7 @@ export default function Rocket({ headColor, openModal }) {
                         </g>
                     </g>
                 </g>
-            </g>
-        </svg>
+            </motion.g>
+        </motion.svg>
     );
 }

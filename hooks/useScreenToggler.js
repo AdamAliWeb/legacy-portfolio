@@ -1,19 +1,26 @@
 import { useState } from "react";
 
-export default function useScreenToggler(initialScreenState) {
-    const [screenPower, setScreenPower] = useState(initialScreenState);
+const initialScreenState = (num) => {
+    if (!localStorage.getItem("screen-" + num)) {
+        localStorage.setItem("screen-" + num, "off");
+    }
 
-    const turnOn = (screen) =>
-        setScreenPower({
-            ...screenPower,
-            [screen]: true,
-        });
+    return localStorage.getItem("screen-" + num) === "on" ? true : false;
+};
 
-    const turnOff = (screen) =>
-        setScreenPower({
-            ...screenPower,
-            [screen]: false,
-        });
+export default function useScreenToggler(screenNumber = 1) {
+    const [screenPower, setScreenPower] = useState(
+        initialScreenState(screenNumber)
+    );
 
-    return { screenPower, turnOn, turnOff };
+    const turnOn = () => {
+        setScreenPower(true);
+        localStorage.setItem("screen-" + screenNumber, "on");
+    };
+    const turnOff = () => {
+        setScreenPower(false);
+        localStorage.setItem("screen-" + screenNumber, "off");
+    };
+
+    return [screenPower, turnOn, turnOff];
 }

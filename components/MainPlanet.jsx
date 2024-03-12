@@ -1,38 +1,24 @@
 import { motion } from "framer-motion";
 import "./MainPlanet.scss";
 
-export default function MainPlanet() {
+import { mainPlanetScalingAnimation } from "../helpers/onceAnimations";
+import { mainPlanetRotationAnimation } from "../helpers/constantAnimations";
+
+export default function MainPlanet({ mainPlanetScaling }) {
     return (
         <motion.svg
             className="main-planet"
-            // animate={{
-            //     rotate: [0, -360],
-            // }}
-            // transition={{
-            //     duration: 100,
-            //     delay: 2,
-            //     ease: "linear",
-            //     times: [0, 1],
-            //     repeat: Infinity,
-            // }}
+            {...mainPlanetRotationAnimation}
             viewBox="0 0 602 602"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
             <motion.g
                 id="complete-planet-container"
-                // animate={{
-                //     scale: [0, 1],
-                // }}
-                // transition={{
-                //     duration: 1,
-                //     delay: 0.5,
-                //     ease: "linear",
-                //     times: [0, 1],
-                // }}
+                {...(!mainPlanetScaling ? mainPlanetScalingAnimation : {})}
             >
                 <g id="complete-planet">
-                    <motion.g id="planet">
+                    <g id="planet">
                         <path
                             id="Vector"
                             d="M266.382 14.1654C38.2888 35.7952 -84.4907 307.564 66.601 493.134C136.425 579.214 253.023 621.795 367.947 592.184C429.516 576.301 482.751 541.062 520.674 495.209C686.281 296.031 530.284 -11.0162 266.382 14.1654Z"
@@ -134,7 +120,7 @@ export default function MainPlanet() {
                                 />
                             </g>
                         </g>
-                    </motion.g>
+                    </g>
                     <g id="Telescope">
                         <g id="Telescope_2">
                             <g id="Group_4">

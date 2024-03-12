@@ -12,7 +12,7 @@
     background-color: #0005;
     z-index: 20;
     overflow-y: auto;
-    // transform: translateX(-100%);
+    transform: scale(0);
 }
 
 .modal-window {
@@ -25,4 +25,10 @@
     text-align: center;
     overflow-y: auto;
     scrollbar-width: none;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.modal-open {
+    transform: scale(1);
 }

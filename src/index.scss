@@ -28,6 +28,7 @@ body {
     min-height: 100vh;
     background-color: $first-blue;
     color: $first-white;
+    overflow-x: hidden;
 }
 
 textarea {
@@ -40,9 +41,9 @@ textarea {
 }
 
 #particles-js {
-    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: fixed;
     z-index: -99;
 }
 
@@ -55,7 +56,7 @@ textarea {
     color: $second-yellow;
 }
 
-.modal-open {
+.modal-overflow-lock {
     overflow: hidden;
 }
 
@@ -70,4 +71,11 @@ textarea {
     color: $second-black;
     border: solid medium $first-black;
     border-radius: 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: $font-size-36;
+    width: 90%;
+    color: $fourth-blue;
 }

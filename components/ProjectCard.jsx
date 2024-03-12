@@ -3,13 +3,14 @@ import ModalWindow from "./ModalWindow";
 import "./ProjectCard.scss";
 
 export default function ProjectCard({
+    modalState,
     closeModal,
     title,
     children,
     technologyStack,
 }) {
     return (
-        <ModalWindow closeModal={closeModal}>
+        <ModalWindow modalState={modalState} closeModal={closeModal}>
             <img
                 className="project-title"
                 src={`../assets/${title}.svg`}
@@ -19,6 +20,7 @@ export default function ProjectCard({
                 {technologyStack.map((tech, index) => (
                     <img
                         key={index}
+                        className="project-technology"
                         src={`../assets/technologies/${tech}.svg`}
                         alt={tech}
                     />

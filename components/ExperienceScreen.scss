@@ -15,11 +15,9 @@
 }
 
 .screen-container {
-    background-color: $third-blue;
-
+    position: relative;
     width: 95%;
-    padding: 0.5rem;
-
+    background-color: $third-blue;
     border: solid medium $first-black;
     border-radius: 1rem;
 }
@@ -47,12 +45,35 @@
     background-color: $primary-green;
 }
 
-.screen-off {
+.screen-background {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     background-color: $second-black;
+    border-radius: 0.75rem;
 
-    div {
-        visibility: hidden;
+    &.screen-on {
+        animation: turned-on 0.5s ease forwards;
+        .screen-power {
+            background-color: $first-white;
+            animation: turn-on 0.5s ease;
+        }
     }
+
+    &.screen-off {
+        animation: turned-off 0.5s ease forwards;
+        .screen-power {
+            background-color: $first-white;
+            animation: turn-off 0.5s ease;
+        }
+    }
+}
+
+.screen-content {
+    padding: 0.5rem;
 }
 
 .screen-title {
@@ -68,5 +89,58 @@
 @media screen and (min-width: 500px) {
     .screen-text {
         word-break: initial;
+    }
+}
+
+@keyframes turn-on {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    50% {
+        height: 3px;
+        width: 100%;
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+    }
+}
+
+@keyframes turned-on {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes turn-off {
+    0% {
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    50% {
+        height: 3px;
+        width: 100%;
+    }
+    100% {
+        height: 0;
+        width: 0;
+    }
+}
+
+@keyframes turned-off {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
     }
 }
