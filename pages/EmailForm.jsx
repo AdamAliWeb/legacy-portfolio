@@ -3,13 +3,20 @@ import useForm from "../hooks/useForm";
 import "./EmailForm.scss";
 
 export default function EmailForm({ isDesktop }) {
-    const { form, errors, response, handleChange, handleBlur, handleSubmit } =
-        useForm({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-        });
+    const {
+        form,
+        errors,
+        response,
+        failedResponse,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+    } = useForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
 
     return (
         <article className="email-form">
@@ -78,15 +85,19 @@ export default function EmailForm({ isDesktop }) {
                     <p className="error-message">{errors.message}</p>
                 ) : null}
 
-                {response[0] ? (
-                    <p
-                        className={`request ${
-                            response[1] ? "success" : "error"
-                        }`}
-                    >
-                        {response[0]}
+                {response && (
+                    <p className={`request request--success`}>
+                        Your data has been successfully submitted.
                     </p>
-                ) : null}
+                )}
+
+                {failedResponse && (
+                    <p className={`request request--error`}>
+                        An error occurred. Please try again. If the issue
+                        persists, reach out to me through my other social media
+                        channels and inform me about the problem.
+                    </p>
+                )}
 
                 <input type="submit" className="submit-btn" value="Send" />
             </form>

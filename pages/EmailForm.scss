@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // min-height: 50vh;
 }
 
 .form-header {
@@ -41,10 +40,18 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 1.25rem;
+    font-weight: bold;
     border: solid 2px $first-black;
     border-radius: 1rem;
     background-color: $third-blue;
     color: $first-white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: $first-white;
+    color: $third-blue;
 }
 
 .error-message {
@@ -53,4 +60,19 @@
     text-align: start;
     margin: 0rem;
     color: $primary-red;
+}
+
+.request {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.request--success {
+    background-color: $success;
+}
+
+.request--error {
+    background-color: $error;
 }

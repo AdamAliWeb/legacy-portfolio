@@ -24,7 +24,7 @@ export default function Experience({ wasAnimated, activateProperty }) {
     return (
         <article className="experience">
             <h1 className="section-title">
-                {"Turn on the screens pressing the green buttons"
+                {"Activate Screens by Pressing the Green Buttons"
                     .split(" ")
                     .map((el, index) => (
                         <motion.span
@@ -48,19 +48,20 @@ export default function Experience({ wasAnimated, activateProperty }) {
                     turnOn={turnOn1}
                     turnOff={turnOff1}
                 >
-                    Strong foundational knowledge and proficiency in basic
-                    technologies such as HTML, CSS, and JavaScript. debugging.
-                    Knowledge and application of code versioning with Git and
-                    GitHub. Solid understanding of the latest Front-end
-                    development technologies like React and Bootstrap 5, and
-                    always staying up-to-date with the latest trends. Strong
-                    management in compilation of JavaScript packages with Vite
-                    and Webpack Proficient and organized in web page design
-                    using specialized software like Figma. Strong knowledge in
-                    React.JS and his environment such as React Router and Redux.
-                    Good at CSS preprocessing tools such as SASS Well skilled
-                    with asynchronous data manipulation in JSON format using
-                    Restful apis structure.
+                    I possess a strong foundational knowledge and proficiency in
+                    essential technologies such as HTML, CSS, and JavaScript.
+                    Additionally, I excel in debugging and have a thorough
+                    understanding of code versioning using Git and GitHub. I
+                    stay abreast of the latest front-end development
+                    technologies like React and Bootstrap 5, ensuring that my
+                    skills remain current. I have adept management skills in
+                    compiling JavaScript packages with Vite and Webpack and am
+                    proficient and organized in web page design using
+                    specialized software like Figma. My expertise extends to
+                    React.JS and its associated environment, including React
+                    Router and Redux. I am also skilled in CSS preprocessing
+                    tools such as SASS and adept at asynchronous data
+                    manipulation in JSON format using Restful API structures.
                 </ExperienceScreen>
                 <ExperienceScreen
                     title={"Soft Skills"}
@@ -72,14 +73,15 @@ export default function Experience({ wasAnimated, activateProperty }) {
                     turnOn={turnOn2}
                     turnOff={turnOff2}
                 >
-                    Strong problem-solving ability, breaking down code point by
-                    point and expertise in debugging Adherence to best practices
-                    in development. Great interest and passion for the field,
-                    always attentive and prepared to assist in a disciplined and
-                    responsible manner. Always interested to stay updated and
-                    prepared for the new upcoming technologies. Fluency in
-                    English, Spanish and Ukrainian. Able and inspired to mantain
-                    a clean and organized workspace
+                    I possess a strong problem-solving ability, capable of
+                    dissecting code point by point and expertly debugging. I
+                    adhere strictly to best practices in development and
+                    approach tasks with great interest and passion, always
+                    prepared to assist in a disciplined and responsible manner.
+                    I am committed to staying updated and well-prepared for
+                    emerging technologies. Furthermore, I am fluent in English,
+                    Spanish, and Ukrainian and am motivated to maintain a clean
+                    and organized workspace.
                 </ExperienceScreen>
                 <ExperienceScreen
                     title={"Work Experience"}
@@ -91,14 +93,19 @@ export default function Experience({ wasAnimated, activateProperty }) {
                     turnOn={turnOn3}
                     turnOff={turnOff3}
                 >
-                    I worked for 1 year in the WebDevZone Project. WebDevZone is
-                    a website where you can learn or review free online
-                    resources related to web programming. There are resources,
-                    tools, guides, tips and exercises which you can use to help
-                    you. The resources are not mine, they are from other content
-                    creators, I just compile the information and make it
-                    accessible to you. The website is
-                    https://webdevzone.adamaliweb.com/dist/.
+                    I dedicated nearly 6 months to the WebDevZone Project.
+                    WebDevZone is a platform designed for individuals interested
+                    in learning or revising free online resources pertaining to
+                    web programming. It hosts an array of resources, tools,
+                    guides, tips, and exercises to aid users in their learning
+                    journey. While the resources themselves are sourced from
+                    various content creators, I am responsible for curating and
+                    presenting them in an accessible format for users.
+                    Additionally, I developed YouTube Info Gather, an
+                    application that enables users to extract information from
+                    YouTube content. Presently, it can gather, save, and compare
+                    data from videos within a playlist. For further details,
+                    please refer to the projects section.
                 </ExperienceScreen>
                 <ExperienceScreen
                     title={"Education"}
@@ -110,11 +117,12 @@ export default function Experience({ wasAnimated, activateProperty }) {
                     turnOn={turnOn4}
                     turnOff={turnOff4}
                 >
-                    I have high School diploma. My programming knowledge comes
-                    from online corroborate certificates from FreeCodeCamp and
-                    online resources. Here are my mentors: JonMircha MiduDev
-                    WebdevSimplified Kevin Powell Here are my Programming
-                    profiles: GitHub Exercism FreeCodeCamp
+                    I hold a high school diploma from Ukraine. My proficiency in
+                    programming stems from a combination of online
+                    certifications obtained from platforms like FreeCodeCamp,
+                    self-study through online resources and mentorship, and
+                    extensive practice with coding. Further information about my
+                    educational background can be found in my CV.
                 </ExperienceScreen>
             </section>
         </article>

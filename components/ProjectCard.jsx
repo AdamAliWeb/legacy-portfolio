@@ -6,8 +6,12 @@ export default function ProjectCard({
     modalState,
     closeModal,
     title,
-    children,
     technologyStack,
+    buttonStates,
+    repositoryLink,
+    projectLink,
+    mobileLink,
+    children,
 }) {
     return (
         <ModalWindow modalState={modalState} closeModal={closeModal}>
@@ -28,7 +32,13 @@ export default function ProjectCard({
             </div>
             <p className="project-description">{children}</p>
             <div className="project-links">
-                <a className="project-button" href="#" target="_blank">
+                <a
+                    className={`project-button ${
+                        buttonStates[0] ? "" : "project-button--disabled"
+                    }`}
+                    href={repositoryLink}
+                    target="_blank"
+                >
                     <img
                         className="project-button-icon"
                         src="../assets/icons/github-icon.svg"
@@ -36,7 +46,13 @@ export default function ProjectCard({
                     />{" "}
                     Repository
                 </a>
-                <a className="project-button" href="#" target="_blank">
+                <a
+                    className={`project-button ${
+                        buttonStates[1] ? "" : "project-button--disabled"
+                    }`}
+                    href={projectLink}
+                    target="_blank"
+                >
                     <img
                         className="project-button-icon"
                         src="../assets/icons/global-icon.svg"
@@ -44,7 +60,13 @@ export default function ProjectCard({
                     />{" "}
                     Project Link
                 </a>
-                <a className="project-button disabled" href="#" target="_blank">
+                <a
+                    className={`project-button ${
+                        buttonStates[2] ? "" : "project-button--disabled"
+                    }`}
+                    href={mobileLink}
+                    target="_blank"
+                >
                     <img
                         className="project-button-icon large-icon"
                         src="../assets/icons/mobile-icon.svg"

@@ -10,7 +10,8 @@ let serviceID = "service_pp3feod",
 export default function useForm(initialForm) {
     const [form, setForm] = useState(initialForm);
     const [errors, setErrors] = useState({});
-    const [response, setResponse] = useState(["", false]);
+    const [response, setResponse] = useState(false);
+    const [failedResponse, setFailedResponse] = useState(false);
 
     // The Functions to Handle Changes to the Inputs
     const handleChange = (e) => {
@@ -29,41 +30,31 @@ export default function useForm(initialForm) {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors(formValidation(form));
-        e.target.querySelector("input[type='submit']").disabled = true;
 
         if (Object.keys(errors).length !== 0) {
-            setResponse([
-                "The entered data is incorrect. Please try again.",
-                false,
-            ]);
-            setTimeout(() => {
-                setResponse(["", false]);
-            }, 5000);
+            setResponse(false);
             return;
+        } else {
+            e.target.querySelector("input[type='submit']").disabled = true;
         }
 
         emailjs.sendForm(serviceID, templateID, e.target, publicKey).then(
             () => {
-                setResponse([
-                    "Your message was sent correctly, I will try to respond you as soon as possible",
-                    true,
-                ]);
+                setResponse(true);
                 setForm(initialForm);
                 e.target.querySelector("input[type='submit']").disabled = false;
                 setTimeout(() => {
-                    setResponse(["", true]);
-                }, 10000);
+                    setResponse(false);
+                }, 5000);
             },
             () => {
-                setResponse([
-                    "Something went wrong, try again or try to contact me by my social links below",
-                    false,
-                ]);
+                setResponse(false);
+                setFailedResponse(true);
                 setForm(initialForm);
                 e.target.querySelector("input[type='submit']").disabled = false;
                 setTimeout(() => {
-                    setResponse(["", false]);
-                }, 10000);
+                    setFailedResponse(false);
+                }, 5000);
             }
         );
     };
@@ -72,6 +63,7 @@ export default function useForm(initialForm) {
         form,
         errors,
         response,
+        failedResponse,
         handleChange,
         handleBlur,
         handleSubmit,

@@ -40,6 +40,11 @@
     transform: scale(1.05);
 }
 
+.project-button--disabled {
+    background-color: $disabled;
+    pointer-events: none;
+}
+
 .project-button-icon {
     margin-right: 0.5rem;
     width: 1rem;

@@ -22,71 +22,73 @@ export default function Biography({ wasAnimated, activateProperty }) {
                 <div className="biography-text">
                     <h2>Introduction</h2>
                     <p>
-                        Hi, you are probably wondering who I am, If you want to
-                        knowkeep reading, if you are only interested in my
-                        portfolio, you can skip this section.
+                        Hi there! You're probably curious about who I am. If you
+                        want to learn more, keep reading. Otherwise, feel free
+                        to skip this section and head straight to my portfolio.
                     </p>
+
                     <h2>Presentation</h2>
                     <p>
-                        My name is Adam Ali and I am 20 years old. I was born in
-                        Spain but I am also Ukrainian. So I was continuously
-                        switching between Spain and Ukraine. At the age of 11. I
-                        moved to Ukraine and finally that's where me and my
-                        family decided to stay, but due to the war that started
-                        in 2022 we had to leave Ukraine. We went to Spain,
-                        lasted for 8 months, and at the half of that time we
-                        were thinking about living in Canada, so we applied for
-                        the Visa and waited. At the beginning of 2023 we flew to
-                        Canada and there is where I am living right now.
+                        My name is Adam Ali, and I'm 20 years old. I was born in
+                        Spain but also have Ukrainian roots. Growing up, my
+                        family and I moved between Spain and Ukraine quite
+                        frequently. When I was 11, we settled in Ukraine, but
+                        unfortunately, due to the war that began in 2022, we
+                        were forced to leave the country. We sought refuge in
+                        Spain, where we stayed for 8 months. During that time,
+                        we considered relocating to Canada, so we applied for a
+                        visa and waited. In early 2023, we made the move to
+                        Canada, where I currently reside.
                     </p>
-                    <h2>Programming</h2>
+
+                    <h2>Programming Journey</h2>
                     <p>
-                        As a child I loved to play videogames, so when someone
-                        asked what my future profession would be, I answered
-                        that I would be a videogames programmer. I tried at 12
-                        and 14 to start learning programming, but I couldn't
-                        progress too much. That changed when I turned 16 that I
-                        was suddenly interested in web programming and I started
-                        to learn the basics.
-                    </p>
-                    <p></p>
-                    <p>
-                        I don't remember exactly why, I would just say that I
-                        would like to combine programming with the creation of
-                        content. I was studying for 1 year and then I didn't
-                        progress more cause I was in the last course of the High
-                        school in Ukraine and I had to prepare myself for the
-                        final exams, in Spain after the Summer I decided to get
-                        back to web programming and I started to learn more
-                        advanced things such as JavaScript frameworks, version
-                        controlling, design softwares, etcetera. This was
-                        completely on my own, watching YouTube courses and
-                        tutorials and practicing.
+                        As a child, I was fascinated by video games, and I
+                        dreamt of becoming a video game programmer. I made my
+                        first attempts to learn programming at the ages of 12
+                        and 14, but I struggled to make progress. However,
+                        everything changed when I turned 16 and discovered my
+                        passion for web development. I started learning the
+                        basics and found myself captivated by the world of web
+                        programming.
                     </p>
                     <p>
-                        If I have to highlight a educational content creator,
-                        that would be JonMircha. He is a Mexican programmer that
-                        makes programming courses for free. Besides that, he
-                        makes videos that are understandable and he brings a lot
-                        of added value by telling us his experiences or best
-                        practices. And now I am already learning frontend
-                        programming for 2 years. So now I am planning and
-                        creating some promising and useful projects.
+                        Although I can't pinpoint exactly why, I felt drawn to
+                        combining programming with content creation. I dedicated
+                        a year to studying, but progress was slow as I juggled
+                        my studies with preparing for final exams during my last
+                        year of high school in Ukraine. After a summer break in
+                        Spain, I reignited my passion for web programming and
+                        delved into more advanced topics, such as JavaScript
+                        frameworks, version control, and design software. This
+                        journey was entirely self-directed. I relied on YouTube
+                        courses, tutorials, and lots of practice to hone my
+                        skills.
                     </p>
-                    <h2>Other stuff</h2>
                     <p>
-                        If you wish to know even more about me I can tell you
-                        here. I am usually a responsible and constant person
-                        that mostly likes to follow a routine and progress every
-                        day. My hobbies are playing videogames, training and
-                        beatbox. I have a lot of goals to achieve and hope to do
-                        it, one of them was this website. But yeah there's not
-                        much about me that I consider relevant or different
-                        since I like to treat every person with respect and
-                        equaly. Lastly I love trying to help other people cause
-                        I think that's what makes us grow. So if you have any
-                        questions or projects in mind I can help you achieve
-                        them.
+                        One educational content creator who significantly
+                        influenced my learning journey is JonMircha, a Mexican
+                        programmer known for his free programming courses. His
+                        videos are not only informative but also engaging, and
+                        he shares valuable insights and experiences. Thanks to
+                        his guidance, I've been immersed in frontend programming
+                        for the past two years, and I'm currently working on
+                        several exciting projects.
+                    </p>
+
+                    <h2>Other Interests</h2>
+                    <p>
+                        If you're curious to learn more about me, I'm happy to
+                        share! I consider myself a responsible and consistent
+                        individual who thrives on routine and daily progress. My
+                        hobbies include playing video games, staying active
+                        through training, and practicing beatboxing. I have
+                        ambitious goals that I'm determined to achieve, building
+                        this website was one of them. Beyond that, I strive to
+                        treat everyone with respect and equality. Lastly, I'm
+                        passionate about helping others grow and succeed. So, if
+                        you have any questions or projects in mind, I'm here to
+                        assist you in any way I can.
                     </p>
                 </div>
             </motion.section>

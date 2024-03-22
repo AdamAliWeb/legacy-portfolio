@@ -34,7 +34,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
     return (
         <article className="rockets-container">
             <h1 className="section-title">
-                {"Click a rocket window to see a project"
+                {"Click on a rocket window to view a project"
                     .split(" ")
                     .map((el, index) => (
                         <motion.span
@@ -67,40 +67,52 @@ export default function Projects({ wasAnimated, activateProperty }) {
                 closeModal={closeModal1}
                 title={"WebDevZone"}
                 technologyStack={[
-                    "React",
-                    "React Router",
-                    "Vite",
-                    "Bootstrap",
-                    "SASS",
+                    "react",
+                    "react-router",
+                    "vite",
+                    "bootstrap",
+                    "sass",
                 ]}
+                buttonStates={[true, true, false]}
+                repositoryLink={"https://github.com/AdamAliWeb/web-dev-zone"}
+                projectLink={"https://webdevzone.adamaliweb.com"}
+                mobileLink={"#"}
             >
-                This site will assist you through various online resources,
-                entirely free, in becoming a web developer. Here, you will
-                discover tutorials, guides, tools, tips, and a variety of
-                supplementary content to guide and support you in your goal of
-                learning web programming. Primarily, the resources are not mine
-                and are not paid; they are in the public domain.
+                This website is designed to help you become a web developer by
+                providing access to a wide range of online resources completely
+                free of charge. You'll find tutorials, guides, tools, tips, and
+                additional content to support and guide you in your journey of
+                learning web programming. It's important to note that the
+                resources available here are not owned or paid for by us; they
+                are sourced from the public domain.
             </ProjectCard>
 
             <ProjectCard
                 modalState={modalActive2}
                 closeModal={closeModal2}
                 title={"Youtube Info Gather"}
+                buttonStates={[true, true, false]}
                 technologyStack={[
-                    "React",
-                    "React Router",
-                    "Vite",
-                    "Tailwind",
-                    "SASS",
+                    "react",
+                    "react-router",
+                    "vite",
+                    "tailwind",
+                    "sass",
                 ]}
+                repositoryLink={
+                    "https://github.com/AdamAliWeb/youtube-info-gather"
+                }
+                projectLink={"https://youtubeinfogather.adamaliweb.com"}
+                mobileLink={"#"}
             >
-                This app allows you to gather information from YouTube content.
-                Currently, it can collect, save, and compare data from videos in
-                a playlist. This is helpful because sometimes YouTube videos are
-                deleted without notice. It can be tedious to find and recover
-                them, but with this app, you can save playlist data and easily
-                identify missing videos. More features will be added in the
-                future.
+                This application enables you to retrieve information from
+                YouTube content. Presently, it can gather, save, and compare
+                data from videos within a playlist. This feature is valuable
+                because YouTube videos are occasionally removed without
+                notification, making it challenging to locate and restore them.
+                However, with this app, you can preserve playlist data and
+                effortlessly identify any missing videos. Expect additional
+                features to be introduced in future updates.
             </ProjectCard>
         </article>
     );
