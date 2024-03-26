@@ -14,30 +14,6 @@ const ufoBounceAnimation = {
     },
 };
 
-const mainPlanetRotationAnimation = {
-    animate: {
-        rotate: [0, -360],
-    },
-    transition: {
-        duration: 100,
-        ease: "linear",
-        times: [0, 1],
-        repeat: Infinity,
-    },
-};
-
-const blackHoleRotationAnimation = {
-    animate: {
-        rotate: [0, -360],
-    },
-    transition: {
-        duration: 25,
-        ease: "linear",
-        times: [0, 1],
-        repeat: Infinity,
-    },
-};
-
 const blackHoleSectionExpandingAnimation = (scaleSize, delay = 0) => ({
     animate: {
         scale: [1, scaleSize, 1],
@@ -49,18 +25,6 @@ const blackHoleSectionExpandingAnimation = (scaleSize, delay = 0) => ({
         delay,
     },
 });
-
-const socialPlanetRotationAnimation = {
-    animate: {
-        rotate: [0, 360],
-    },
-    transition: {
-        duration: 100,
-        ease: "linear",
-        times: [0, 1],
-        repeat: Infinity,
-    },
-};
 
 const rocketBounceAnimation = (bounceDuration) => ({
     animate: {
@@ -136,12 +100,9 @@ const cometParticleAnimation = (x, y, delay) => ({
 
 export {
     ufoBounceAnimation,
-    mainPlanetRotationAnimation,
-    blackHoleRotationAnimation,
     blackHoleSectionExpandingAnimation,
     rocketBounceAnimation,
     rocketFireAnimation,
-    socialPlanetRotationAnimation,
     cometTrialAnimation,
     cometMeteorAnimation,
     cometParticleAnimation,

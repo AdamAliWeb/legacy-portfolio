@@ -92,13 +92,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
                 closeModal={closeModal2}
                 title={"Youtube Info Gather"}
                 buttonStates={[true, true, false]}
-                technologyStack={[
-                    "react",
-                    "react-router",
-                    "vite",
-                    "tailwind",
-                    "sass",
-                ]}
+                technologyStack={["react", "react-router", "vite", "tailwind"]}
                 repositoryLink={
                     "https://github.com/AdamAliWeb/youtube-info-gather"
                 }

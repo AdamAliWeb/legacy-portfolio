@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { socialPlanetScalingAnimation } from "../../helpers/onceAnimations";
-import { socialPlanetRotationAnimation } from "../../helpers/constantAnimations";
 
 export default function InstagramPlanetSVG({
     socialPlanetsScaling,
@@ -22,7 +21,7 @@ export default function InstagramPlanetSVG({
             >
                 <motion.g
                     id="social-planet-instagram"
-                    {...socialPlanetRotationAnimation}
+                    className="social-planet"
                 >
                     <path
                         id="Vector"

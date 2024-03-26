@@ -2,13 +2,11 @@ import { motion } from "framer-motion";
 import "./MainPlanet.scss";
 
 import { mainPlanetScalingAnimation } from "../helpers/onceAnimations";
-import { mainPlanetRotationAnimation } from "../helpers/constantAnimations";
 
 export default function MainPlanet({ mainPlanetScaling }) {
     return (
         <motion.svg
             className="main-planet"
-            {...mainPlanetRotationAnimation}
             viewBox="0 0 602 602"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { socialPlanetScalingAnimation } from "../../helpers/onceAnimations";
-import { socialPlanetRotationAnimation } from "../../helpers/constantAnimations";
 
 export default function TwitterPlanetSVG({ socialPlanetsScaling, scaleDelay }) {
     return (
@@ -17,10 +16,7 @@ export default function TwitterPlanetSVG({ socialPlanetsScaling, scaleDelay }) {
                     ? socialPlanetScalingAnimation(scaleDelay)
                     : {})}
             >
-                <motion.g
-                    id="social-planet-twitter"
-                    {...socialPlanetRotationAnimation}
-                >
+                <motion.g id="social-planet-twitter" className="social-planet">
                     <path
                         id="Vector"
                         d="M109.476 0.598648C15.7297 9.49131 -34.7228 121.166 27.3739 197.44C56.0613 232.824 103.975 250.322 151.212 238.143C176.515 231.622 198.381 217.139 213.986 198.304C282.04 116.423 217.929 -9.75072 109.476 0.598648Z"

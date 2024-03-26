@@ -22,7 +22,7 @@ export default function Experience({ wasAnimated, activateProperty }) {
     }, []);
 
     return (
-        <article className="experience">
+        <article className="experience-container">
             <h1 className="section-title">
                 {"Activate Screens by Pressing the Green Buttons"
                     .split(" ")
@@ -37,7 +37,7 @@ export default function Experience({ wasAnimated, activateProperty }) {
                         </motion.span>
                     ))}
             </h1>
-            <section className="experience-container">
+            <section className="experience">
                 <ExperienceScreen
                     title={"Abilities"}
                     screensSwinging={wasAnimated.screensSwinging}

@@ -11,8 +11,8 @@ export default function Welcome({ isDesktop, wasAnimated, activateProperty }) {
     }, []);
 
     return (
-        <article className="welcome">
-            <section className="welcome-container">
+        <article className="welcome-container">
+            <section className="welcome">
                 {isDesktop && (
                     <Comet
                         wasAnimated={wasAnimated}

@@ -54,6 +54,7 @@ function App() {
                             path="/biography"
                             element={
                                 <Biography
+                                    isDesktop={desktopLayout}
                                     wasAnimated={wasAnimated}
                                     activateProperty={activateProperty}
                                 />

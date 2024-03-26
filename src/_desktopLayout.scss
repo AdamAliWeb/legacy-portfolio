@@ -7,7 +7,7 @@
             padding-bottom: 4rem;
         }
 
-        .welcome-container {
+        .welcome {
             flex-direction: row;
             align-items: flex-end;
             padding-inline: 2rem;
@@ -33,10 +33,11 @@
             font-size: 1.25rem;
         }
 
-        .experience-container {
+        .experience {
             align-items: flex-start;
             width: 75%;
             margin: auto;
+            overflow: visible;
         }
 
         .experience-screen {

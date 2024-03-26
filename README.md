@@ -15,8 +15,6 @@
 ## Issues to Fix
 
 -   Add an indicator for scrolling down to the black hole section.
--   Optimize code related to **Framer Motion**.
--   Fix mobile animations bugs.
 -   Replace the particle library with **TS Particles**.
 -   Add a moving background for the projects section.
 -   Change the project images to text-only images.

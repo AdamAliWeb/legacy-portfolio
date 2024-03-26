@@ -98,8 +98,11 @@ const typewritterAnimation = (index, delay) => ({
 });
 
 const screensSwingingAnimation = (isOnLeftSide, delay) => ({
-    initial: { x: isOnLeftSide ? -300 : 300, opacity: 0 },
-    animate: { x: 0, opacity: 1 },
+    initial: {
+        transform: isOnLeftSide ? "translateX(-50%)" : "translateX(50%)",
+        opacity: 0,
+    },
+    animate: { transform: "translateX(0)", opacity: 1 },
     transition: { duration: 1, delay },
 });
 

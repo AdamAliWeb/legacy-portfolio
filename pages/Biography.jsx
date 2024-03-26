@@ -5,14 +5,21 @@ import "./Biography.scss";
 import { motion } from "framer-motion";
 import { textFadeInBlackHoleAnimation } from "../helpers/onceAnimations";
 
-export default function Biography({ wasAnimated, activateProperty }) {
+export default function Biography({
+    isDesktop,
+    wasAnimated,
+    activateProperty,
+}) {
     useEffect(() => {
         activateProperty("blackHoleExpanding", "textFadeInBlackHole");
     }, []);
 
     return (
         <article className="biography-container">
-            <BlackHole blackHoleExpanding={wasAnimated.blackHoleExpanding} />
+            <BlackHole
+                isDesktop={isDesktop}
+                blackHoleExpanding={wasAnimated.blackHoleExpanding}
+            />
             <motion.section
                 className="biography-text-center"
                 {...(!wasAnimated.textFadeInBlackHole
