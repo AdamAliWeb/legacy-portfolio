@@ -2,13 +2,11 @@
 
 ## Technology Stack
 
-<div>
-    <img src="https://adamaliweb.com/assets/technologies/react.svg" alt="React"/>
-    <img src="https://adamaliweb.com/assets/technologies/react-router.svg" alt="React Router"/>
-    <img src="https://adamaliweb.com/assets/technologies/sass.svg" alt="SASS"/>
-    <img src="https://adamaliweb.com/assets/technologies/vite.svg" alt="Vite"/>
-    <img src="https://adamaliweb.com/assets/technologies/framer-motion.svg" alt="Framer Motion"/>
-</div>
+![React](https://adamaliweb.com/assets/technologies/react.svg)
+![React Router](https://adamaliweb.com/assets/technologies/react-router.svg)
+![SASS](https://adamaliweb.com/assets/technologies/sass.svg)
+![Vite](https://adamaliweb.com/assets/technologies/vite.svg)
+![Framer Motion](https://adamaliweb.com/assets/technologies/framer-motion-re.svg)
 
 ## Description
 
