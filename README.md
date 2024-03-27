@@ -4,9 +4,9 @@
 
 ![React](https://adamaliweb.com/assets/technologies/react.svg)
 ![React Router](https://adamaliweb.com/assets/technologies/react-router.svg)
+![Framer Motion](https://adamaliweb.com/assets/technologies/framer-motion.svg)
 ![SASS](https://adamaliweb.com/assets/technologies/sass.svg)
 ![Vite](https://adamaliweb.com/assets/technologies/vite.svg)
-![Framer Motion](https://adamaliweb.com/assets/technologies/framer-motion.svg)
 
 ## Description
 
