@@ -16,9 +16,9 @@ export default function Projects({ wasAnimated, activateProperty }) {
     useEffect(() => {
         activateProperty("projectsTypewritter", "rocketsFlying");
 
-        // if (!wasAnimated.rocketsFlying) {
-        //     window.scrollTo(0, document.body.scrollHeight);
-        // }
+        if (!wasAnimated.rocketsFlying) {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
     }, []);
 
     useEffect(() => {
