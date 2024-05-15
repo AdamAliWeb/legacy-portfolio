@@ -14,7 +14,14 @@
 
 ## Issues to Fix
 
+-   Replace CV
+-   Fix main planet svg overlap
+-   Change first rocket animation in mobile
 -   Add an indicator for scrolling down to the black hole section.
+-   Check and fix the contact section
+-   Change the project images to text-only images.
+-   Add an error page
+-   Add tooltips and links to the technology stack
+
 -   Replace the particle library with **TS Particles**.
 -   Add a moving background for the projects section.
--   Change the project images to text-only images.

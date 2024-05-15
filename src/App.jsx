@@ -13,6 +13,7 @@ import useUsedAnimations from "../hooks/useUsedAnimations.js";
 import UFO from "../components/UFO.jsx";
 import DesktopNavMenu from "../components/DesktopNavMenu.jsx";
 import MobileNavMenu from "../components/MobileNavMenu.jsx";
+import ErrorPage from "../pages/ErrorPage.jsx";
 
 function App() {
     const { desktopLayout } = useDesktopLayout();
@@ -91,6 +92,7 @@ function App() {
                             path="/email-form"
                             element={<EmailForm isDesktop={desktopLayout} />}
                         />
+                        <Route path="*" element={<ErrorPage />} />
                     </Routes>
                     {desktopLayout && (
                         <UFO

@@ -16,9 +16,9 @@ export default function Projects({ wasAnimated, activateProperty }) {
     useEffect(() => {
         activateProperty("projectsTypewritter", "rocketsFlying");
 
-        if (!wasAnimated.rocketsFlying) {
-            window.scrollTo(0, document.body.scrollHeight);
-        }
+        // if (!wasAnimated.rocketsFlying) {
+        //     window.scrollTo(0, document.body.scrollHeight);
+        // }
     }, []);
 
     useEffect(() => {
@@ -39,7 +39,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
                     .map((el, index) => (
                         <motion.span
                             {...(!wasAnimated.projectsTypewritter
-                                ? typewritterAnimation(index, 3)
+                                ? typewritterAnimation(index, 2)
                                 : {})}
                             key={index}
                         >
@@ -66,6 +66,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
                 modalState={modalActive1}
                 closeModal={closeModal1}
                 title={"WebDevZone"}
+                logoColor={"#2338fc"}
                 technologyStack={[
                     "react",
                     "react-router",
@@ -91,6 +92,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
                 modalState={modalActive2}
                 closeModal={closeModal2}
                 title={"Youtube Info Gather"}
+                logoColor={"#eff247"}
                 buttonStates={[true, true, false]}
                 technologyStack={["react", "react-router", "vite", "tailwind"]}
                 repositoryLink={

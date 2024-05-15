@@ -133,7 +133,7 @@ const textFadeInBlackHoleAnimation = {
 
 const rocketGoingUpAnimation = {
     initial: {
-        y: "300%",
+        y: "200%",
     },
     animate: {
         y: 0,

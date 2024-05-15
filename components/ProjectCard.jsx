@@ -6,6 +6,7 @@ export default function ProjectCard({
     modalState,
     closeModal,
     title,
+    logoColor,
     technologyStack,
     buttonStates,
     repositoryLink,
@@ -15,15 +16,21 @@ export default function ProjectCard({
 }) {
     return (
         <ModalWindow modalState={modalState} closeModal={closeModal}>
-            <img
-                className="project-title"
-                src={`../assets/${title}.svg`}
-                alt={title}
-            />
+            <div
+                className="title-container"
+                style={{ backgroundColor: logoColor }}
+            >
+                <img
+                    className="project-title"
+                    src={`../assets/${title}.svg`}
+                    alt={title}
+                />
+            </div>
             <div className="project-technologies">
                 {technologyStack.map((tech, index) => (
                     <img
                         key={index}
+                        title={tech}
                         className="project-technology"
                         src={`../assets/technologies/${tech}.svg`}
                         alt={tech}
