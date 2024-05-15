@@ -17,7 +17,7 @@ export default function Projects({ wasAnimated, activateProperty }) {
         activateProperty("projectsTypewritter", "rocketsFlying");
 
         if (!wasAnimated.rocketsFlying) {
-            window.scrollTo(0, document.body.scrollHeight);
+            window.scrollTo(0, 0);
         }
     }, []);
 
