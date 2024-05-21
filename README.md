@@ -10,18 +10,12 @@
 
 ## Description
 
-> Hey, this is my personal website. I created it with patience and dedication, and I would appreciate it if you followed me on LinkedIn, Twitter, and Instagram. There, you can see how I applied my skills to create my portfolio and showcase my projects.
+> Hey, this is a legacy version of my personal website.
+
+<!-- I created it with patience and dedication, and I would appreciate it if you followed me on LinkedIn, Twitter, and Instagram. There, you can see how I applied my skills to create my portfolio and showcase my projects. -->
 
 ## Issues to Fix
 
--   Replace CV
--   Fix main planet svg overlap
--   Change first rocket animation in mobile
--   Add an indicator for scrolling down to the black hole section.
 -   Check and fix the contact section
--   Change the project images to text-only images.
--   Add an error page
--   Add tooltips and links to the technology stack
-
 -   Replace the particle library with **TS Particles**.
 -   Add a moving background for the projects section.
